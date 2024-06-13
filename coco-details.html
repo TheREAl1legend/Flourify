@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coconut Oil Details</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+</head>
+<body>
+<div class="container">
+    <div class="navbar">
+        <div class="logo">
+            <a href="index.html"> <img src="logzo.jpeg" width="125px" /></a>
+        </div>
+        <nav>
+            <ul id="MenuItems">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown" onclick="menutoggl()"><a class="active">Products
+                        <i class="fas fa-caret-down"></i>
+                    </a>
+                    <ul id="inneritems">
+                        <li><a href="flour.html">Flour</a></li>
+                        <li><a href="oil.html">Oil</a></li>
+                        <li><a href="others.html">Others</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="account.html">Account</a></li>
+            </ul>
+        </nav>
+        <a href="card.html"><img src="cart.png" width="30px" height="30px"></a>
+        <img src="men-u.jpg" class="menu-icon" onclick="menutoggle()">
+    </div>
+</div>
+
+<div class="small-container single-product">
+    <div class="row">
+        <div class="col-2">
+            <img src="Coconut.jpg" width="100%" id="productImg">
+            <div class="small-img-row">
+                <div class="small-img-col">
+                    <img src="Coconut.jpg" width="100%" class="small-img">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-2">
+          <div class="col-2">
+            <p>Home / Oil</p>
+            <h1>Coconut Oil</h1>
+            <h4>₹295/litre</h4>
+            <p></p>
+            <span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span><p>4 stars out of 5</p><br>
+            <input type="number" id="quantity" value="1">
+            <button onclick="addToCart('Coconut Oil', 295)">Add To Cart</button>
+            <h3>Product Details</h3>
+            <br>
+            <p> <b>Calories: 350 kcal
+            <p> <b>Protein: </b> 10g<br>
+            <p> <b> Carbohydrates: </b> : 75g<br>
+            <p> <b>Fat:</b> 1.5g<br>
+            <p> <b>Fiber:</b> 3g<br>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="small-container">
+    <div class="row row-2">
+        <h2>Related Product</h2>
+        <p>View More</p>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container-f">
+        <div class="row-f">
+            <div class="footer-col">
+                <h4>Online Shop</h4>
+                <ul>
+                    <li><a href="flour.html">Flour Products</a></li>
+                    <li><a href="oil.html">Oil Products</a></li>
+                    <li><a href="others.html">Others</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>get help</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">shipping</a></li>
+                    <li><a href="#">returns</a></li>
+                    <li><a href="#">order status</a></li>
+                    <li><a href="#">payment options</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>company</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="product.html">Our Services</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>follow us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="copyright text-center">
+            <h5><a href="#">Copyright © 2024 Flourify. All rights reserved. Any redistribution or reproduction of part or all of the contents in any form is prohibited🌐</a></h5>
+        </div>
+    </div>
+</footer>
+
+<script>
+    var MenuItems = document.getElementById("MenuItems");
+    var MenuItem = document.getElementById("inneritems");
+    MenuItems.style.maxHeight = "0px";
+  
+    function menutoggle(){
+      if(MenuItems.style.maxHeight == "0px")
+      {
+       MenuItems.style.maxHeight = "200px";
+      }
+      else
+      {
+       MenuItems.style.maxHeight = "0px";
+      }
+     
+    }
+    function menutoggl(){
+      if(MenuItem.style.display == "block")
+      {
+       MenuItem.style.display = "none";
+      }
+      else
+      {
+       MenuItem.style.display = "block";
+      }
+     
+    }
+ </script>
+
+ 
+<script>
+    var ProductImg = document.getElementById("productImg");
+    var SmallImg = document.getElementsByClassName("small-img");
+    
+   SmallImg[0].onclick = function()
+   {
+       ProductImg.src = SmallImg[0].src;
+   }
+   SmallImg[1].onclick = function()
+   {
+       ProductImg.src = SmallImg[1].src;
+   }
+   SmallImg[2].onclick = function()
+   {
+       ProductImg.src = SmallImg[2].src;
+   }
+   SmallImg[3].onclick = function()
+   {
+       ProductImg.src = SmallImg[3].src;
+   }
+</script>
+
+<button id="addToCartBtn" onclick="addToCart()">Add To Cart</button>
+
+<script>
+    function addToCart(name, price) {
+        var quantity = parseInt(document.getElementById('quantity').value);
+
+        var existingItems = JSON.parse(localStorage.getItem('cartItem')) || [];
+    
+        var newItem = {
+            name: name,
+            quantity: quantity,
+            price: price,
+            total: price * quantity
+        };
+        
+        existingItems.push(newItem);
+        
+        localStorage.setItem('cartItem', JSON.stringify(existingItems));
+        
+        window.location.href = 'card.html';
+    }
+    </script> 
+
+
+
+</body>
+</html>
+

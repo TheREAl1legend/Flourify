@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"> <img src="logzo.jpeg" width="125px" /></a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown" onclick="menutoggl()"><a class="active">Products
+                            <i class="fas fa-caret-down"></i>
+                        </a>
+                        <ul id="inneritems">
+                            <li><a href="flour.html">Flour</a></li>
+                            <li><a href="oil.html">Oil</a></li>
+                            <li><a href="others.html">Others</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </nav>
+            <a href="card.html"><img src="cart.png" width="30px" height="30px"></a>
+            <img src="men-u.jpg" class="menu-icon" onclick="menutoggle()">
+        </div>
+    </div>
+    
+
+    <div class="profile-box">
+        <div class="profile-info">
+          <h1>User Profile</h1>
+          <div class="profile-details">
+            <p><strong>Username:</strong> <span id="username">User name</span></p>
+            <p><strong>Email:</strong> <span id="email">usermail@gmail.com</span></p>
+            <p><strong>Password:</strong> <span id="password">**************</span></p>
+            <p><strong>Contact Number:</strong> <span id="email">123789xx</span></p>
+            <p><strong>Address:</strong> <span id="address">User Address</span></p>
+          </div>
+        </div>
+      </div>
+
+  <script>
+    var MenuItems = document.getElementById("MenuItems");
+    var MenuItem = document.getElementById("inneritems");
+    MenuItems.style.maxHeight = "0px";
+
+    function menutoggle() {
+      if (MenuItems.style.maxHeight == "0px") {
+        MenuItems.style.maxHeight = "200px";
+      } else {
+        MenuItems.style.maxHeight = "0px";
+      }
+    }
+
+    function menutoggl() {
+      if (MenuItem.style.display == "block") {
+        MenuItem.style.display = "none";
+      } else {
+        MenuItem.style.display = "block";
+      }
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Messages | Firebase</title>
+    <link rel="stylesheet" href="account.css">
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"> <img src="logzo.jpeg" width="125px" /></a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown" onclick="menutoggl()"><a class="active">Products
+                            <i class="fas fa-caret-down"></i>
+                        </a>
+                        <ul id="inneritems">
+                            <li><a href="flour.html">Flour</a></li>
+                            <li><a href="oil.html">Oil</a></li>
+                            <li><a href="others.html">Others</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </nav>
+            <a href="card.html"><img src="cart.png" width="30px" height="30px"></a>
+            <img src="men-u.jpg" class="menu-icon" onclick="menutoggle()">
+        </div>
+        <img src="acc-in.png" alt="" srcset="">
+    </div>
+    
+
+    <div class="container">
+        <form action="" id="contactForm">
+            <div class="alert">Account Created Successfully!</div>
+
+            <div class="inputBox">
+                <label for="name">Name:</label>
+                <input type="text" id="Name" placeholder="Enter User Name" required/>
+            </div>
+
+            <div class="inputBox">
+                <label for="name">Email Id:</label>
+                <input type="email" id="Email_Id" placeholder="Enter Email Address" required/>
+            </div>
+            
+            <div class="inputBox">
+                <label for="name">Password:</label>
+                <input type="password" id="password" placeholder="Set Password" required/>
+            </div>
+
+            <div class="inputBox">
+                <label for="name">Address:</label>
+                <textarea id="Address" cols="30" rows="10" placeholder="Shipping Address Details" required></textarea>
+            </div>
+
+            <div class="inputBox">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+     
+     <script>
+       var MenuItems = document.getElementById("MenuItems");
+       var MenuItem = document.getElementById("inneritems");
+       MenuItems.style.maxHeight = "0px";
+
+       function menutoggle(){
+         if(MenuItems.style.maxHeight == "0px")
+         {
+          MenuItems.style.maxHeight = "200px";
+         }
+         else
+         {
+          MenuItems.style.maxHeight = "0px";
+         }
+        
+       }
+       function menutoggl(){
+         if(MenuItem.style.display == "block")
+         {
+          MenuItem.style.display = "none";
+         }
+         else
+         {
+          MenuItem.style.display = "block";
+         }
+        
+       }
+     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="account.js"></script>
+
+<script>
+    function redirectToProfile() {
+        // Redirecting to the profile page
+        window.location.href = "card.html";
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const contactForm = document.getElementById('contactForm');
+    
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+    
+            const successMessage = document.querySelector('.alert');
+            successMessage.style.display = 'block';
+    
+            // Redirecting to the profile page after a delay (you can replace this with your actual success logic)
+            setTimeout(function() {
+                redirectToProfile();
+            }, 2000); // Redirect after 2 seconds (2000 milliseconds)
+        });
+    });
+</script>
+    
+</body>
+</html>
