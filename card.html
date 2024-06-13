@@ -187,8 +187,11 @@
         var hasAccount = localStorage.getItem('hasAccount');
 
         if (!hasAccount) {
+            alert('Create account First!');
+            window.location.href = 'account.html'; 
+        } else {
             window.location.href = 'https://buy.stripe.com/test_fZe4kiee42CF7xmeUW'; 
-        } 
+         }
     }
 </script>
 
