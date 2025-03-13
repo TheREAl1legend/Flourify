@@ -1,61 +1,36 @@
-# Flourify  
-**Flourify – Your Trusted Source for Flour & Oil Products
-Flourify is a seamless e-commerce platform that delivers high-quality flour and oil products straight to your doorstep. Designed for convenience, efficiency, and freshness, we aim to simplify grocery shopping with a hassle-free online experience.
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Getting Started
 
-🚀 Features
-✔️ Wide Variety of Products – Choose from different types of flour and oils.
-✔️ User-Friendly Interface – Simple navigation and smooth checkout process.
-✔️ Fast & Reliable Delivery – Get your essentials delivered on time.
-✔️ Secure Payments – Multiple payment options with encryption security.
-✔️ Real-Time Order Tracking – Stay updated on your order status.
+First, run the development server:
 
-🛠️ Tech Stack
-Flourify is built using a modern and scalable technology stack:
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-Frontend: React.js 
-Backend: Node.js 
-Database: MongoDB / Firebase
-Hosting: Vercel 
-Payment Integration: Stripe 
-📦 Installation & Setup
-To run Flourify locally, follow these steps:
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-1. Clone the Repository
-sh
-Copy
-Edit
-git clone https://github.com/yourusername/flourify.git
-cd flourify
-2. Install Dependencies
-sh
-Copy
-Edit
-npm install   # For Node.js
-pip install -r requirements.txt   # For Python/Django
-3. Run the Application
-sh
-Copy
-Edit
-npm start    # For Node.js React-based frontend
-python manage.py runserver   # For Django backend
-🔗 Live Demo
-Check out Flourify in action: Flourify.com (Replace with actual link)
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-🤝 Contributing
-We welcome contributions! Follow these steps:
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-Fork the repository.
-Create a new branch (feature-new-feature).
-Commit your changes (git commit -m "Added a new feature").
-Push the branch (git push origin feature-new-feature).
-Open a Pull Request for review.
-📜 License
-This project is licensed under the **** License .
+## Learn More
 
-📩 Contact
-For queries, feel free to reach out:
-📧 Email: gurpratiksinghpanwar@gmail.com
-🌐 Website: https://flourify-git-master-thereal1legends-projects.vercel.app/
+To learn more about Next.js, take a look at the following resources:
 
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
